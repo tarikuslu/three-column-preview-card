@@ -1,0 +1,105 @@
+:root {
+   --orange:  hsl(31, 77%, 52%);
+   --cyan: hsl(184, 100%, 22%);
+   --darkCyan: hsl(179, 100%, 13%);
+   --transparentWhite: hsla(0, 0%, 100%, 0.75);
+   --gray: hsl(0, 0%, 95%);
+}
+
+.orange {
+    background-color: var(--orange);
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+}
+
+.cyan {
+    background-color: var(--cyan);
+}
+
+.dark-cyan {
+    background-color: var(--darkCyan);
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Big Shoulders Display', cursive;
+    margin: 0.75em 0;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0 auto;
+    color: var(--transparentWhite);
+    line-height: 1.6;
+    font-size: 0.875rem;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 50%;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    padding:  2.3em 2em;
+}
+
+button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 3em;
+    align-self: flex-start;
+    margin-top: 4.5em;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.orange button {
+    color: var(--orange);
+}
+
+.cyan button {
+    color: var(--cyan);
+}
+
+.dark-cyan button {
+    color: var(--darkCyan);
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        width: 70%;
+        margin: 1em;
+    }
+
+    .orange {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: .5em;
+    }
+
+    .dark-cyan {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: .5em;
+    }
+}
